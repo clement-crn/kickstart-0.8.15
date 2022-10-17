@@ -5,7 +5,7 @@ async function main() {
 
     await factory_contract.deployed();
 
-    //a verifier
+    //à verifier
 
     const factory_contract_address = factory_contract.address;
 
