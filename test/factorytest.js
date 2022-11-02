@@ -1,16 +1,20 @@
-const { ethers } = require("hardhat");
 const { expect } = require("chai");
 
-describe("Factory", function () {
-    it("Devrait déployer un nouveau contrat campagne", async function () {
+describe("Factory contract", function () {
+    it("devrait créer une instance", async function () {
         const [owner] = await ethers.getSigners();
 
-        const Factory_contract = await hre.ethers.getContractFactory("Factory");
-        const factory_contract = await Factory_contract.deploy();
+        const Factory = await ethers.getContractFactory("Factory");
 
-        await factory_contract.createCampaign(0);
-        campaigns = await factory_contract.getCampaigns();
+        const instanceOfFactory = await Factory.deploy();
 
-        expect(await factory_contract.getCampaigns).to.equal(campaigns[0]);
+        await instanceOfFactory.createCampaign(0);
+
+        var myReturn = [];
+        myReturn = await instanceOfFactory.getCampaigns();
+
+        //
+
+        expect(await instanceOfFactory.getCampaigns()).to.equal(myReturn[0]);
     });
 });

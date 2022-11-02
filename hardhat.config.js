@@ -14,8 +14,10 @@ module.exports = {
     solidity: "0.8.15",
     networks: {
         goerli: {
-            url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
-            accounts: [GOERLI_PRIVATE_KEY],
+            url: `https://eth-goerli.alchemyapi.io/v2/${"qGmw-hvk43xBZTsXQB4HFMLF8F21vdmf"}`,
+            accounts: [
+                "48d545c41fe22dace929726a658a72dfa1f88d7691c2f652faa3125d91b0b694",
+            ],
         },
     },
 };
