@@ -13,8 +13,7 @@ describe("Factory contract", function () {
         var myReturn = [];
         myReturn = await instanceOfFactory.getCampaigns();
 
-        //
-
+        //c'est quoi ce bordel
         expect(await instanceOfFactory.getCampaigns()).to.equal(myReturn[0]);
     });
 });
