@@ -10,8 +10,7 @@ describe("Factory contract", function () {
 
         await instanceOfFactory.createCampaign(0);
 
-        var myReturn = [];
-        myReturn = await instanceOfFactory.getCampaigns();
+        const myReturn = await instanceOfFactory.getCampaigns();
 
         //c'est quoi ce bordel
         expect(await instanceOfFactory.getCampaigns()).to.equal(myReturn[0]);
